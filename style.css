@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Facebook';
+    src: url('Assets/facebook.OTF');
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding-top: 80px;
+    /* Space for fixed header */
+    overflow-y: auto;
+    /* Allow scrolling */
+    overflow-x: hidden;
+    color: #ffffff;
+    font-family: 'Facebook', monospace;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+/* Header Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for readability */
+}
+
+th,
+td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center all images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    align-items: center;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.image-link {
+    display: block;
+    width: fit-content;
+    margin: 0;
+    /* Margin handled by gallery gap */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
